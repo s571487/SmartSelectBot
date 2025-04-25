@@ -29,10 +29,10 @@ try:
 except:
   pass
 
-os.environ["OPENAI_API_KEY"] = "" # replace your OPEN_API key
-os.environ["NEO4J_URI"] = "neo4j+s://8b7bdbda.databases.neo4j.io" # NEO4J_URI
+os.environ["OPENAI_API_KEY"] = "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" # replace your OPEN_API key
+os.environ["NEO4J_URI"] = "neo4j+s://5b1684a3.databases.neo4j.io" # NEO4J_URI
 os.environ["NEO4J_USERNAME"] = "neo4j" # NEO4J_USERNAME
-os.environ["NEO4J_PASSWORD"] = "Rwt2sA3-F4GouLPS3N8Ty-T3LkHAgod9fXUNV9m3Vxo" # NEO4J_PASSWORD
+os.environ["NEO4J_PASSWORD"] = "y1guz43OpzBbI5_SydXAfUB0yiCWunao4yCbb3s6sjM" # NEO4J_PASSWORD
 
 _search_query = RunnableLambda(lambda x : x["question"])
 
@@ -68,12 +68,11 @@ prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are extracting course, professors, requirements, project entities from the text.",
+            "You are extracting product names, categories, features, and brand entities from the user's input.",
         ),
         (
             "human",
-            "Use the given format to extract information from the following "
-            "input: {question}",
+            "Use the given format to extract information from the following input: {question}",
         ),
     ]
 )
